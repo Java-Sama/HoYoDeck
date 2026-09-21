@@ -1,0 +1,10 @@
+{
+  "name": "HoYoDeck",
+  "author": "HoYoDeck",
+  "flags": ["debug"],
+  "api_version": 1,
+  "publish": {
+    "tags": ["games", "mihoyoverse", "proton"],
+    "description": "米哈游游戏管理器 — 在 Steam Deck 上运行原神、星穹铁道、绝区零、崩坏3"
+  }
+}
