@@ -207,8 +207,7 @@ sudo systemctl restart plugin_loader   # 重启 Decky 加载插件
 
 | Proton 版本 | 说明 |
 |:------------|:-----|
-| **DW-Proton** | 专门为米哈游游戏优化，推荐首选 |
-| **GE-Proton** | 通用社区兼容层，HoYoDeck 自动下载此版本 |
+| **GE-Proton** | 社区 Proton 构建，HoYoDeck 自动下载安装 |
 
 ## 故障排除
 
@@ -265,7 +264,6 @@ rm -rf ~/.local/share/hoyodeck/
 - [Decky Loader](https://decky.xyz/) — Steam Deck 插件框架
 - [UMU Launcher](https://github.com/Open-Wine-Components/umu-launcher) — Wine/Proton 统一启动器
 - [GE-Proton](https://github.com/GloriousEggroll/proton-ge-custom) — 社区 Proton 构建
-- [DW-Proton](https://github.com/InoriRyacom/DW-Proton) — 米哈游游戏专用 Proton 构建
 - [GameBridge](https://github.com/FelPikachu/GameBridge) — 本项目的架构参考
 
 ## 许可证
