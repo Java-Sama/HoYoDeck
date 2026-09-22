@@ -90,7 +90,7 @@ MIHOYO_LAUNCHER_CONFIG = {
     "provider_id": "mihoyo_cn",
     "display_name": "米哈游启动器（国服）",
     "region": "cn",
-    "installer_url": "https://hyp-webstatic.mihoyo.com/hyp-client/hyp_cn_setup_1.1.4.exe",
+    "installer_url": "https://hyp-webstatic.mihoyo.com/hyp-client/hyp_cn_setup_1.4.5.exe",
     "prefix_name": "mihoyo-cn",
     "executable_candidates": (
         "drive_c/Program Files/miHoYo Launcher/launcher.exe",
