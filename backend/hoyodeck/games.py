@@ -123,9 +123,3 @@ ALL_GAMES: dict[str, GameInfo] = {
 
 CN_GAMES = [GENSHIN_CN, STAR_RAIL_CN, ZZZ_CN, HONKAI3_CN]
 GLOBAL_GAMES = [GENSHIN_GLOBAL, STAR_RAIL_GLOBAL, ZZZ_GLOBAL, HONKAI3_GLOBAL]
-
-# 官方 CDN 封面图 URL 模式
-ARTWORK_CDN = {
-    "hk4e_cn": "https://upload-bbs.mihoyo.com/upload/ys-oversea/2024/01/15/283761964/8f1c1b1e7c6b4a3d9e0f2a5b8c7d6e4f_460_215.jpg",
-    "hk4e_global": "https://fastcdn.hoyoverse.com/content-v2/hk4e/100478/023d12e3e5c54338b65b9fa32d84f6bd_460_215.jpg",
-}

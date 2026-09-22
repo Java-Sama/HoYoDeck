@@ -254,7 +254,13 @@ class Plugin:
 
     async def get_games(self) -> list[dict]:
         """获取所有游戏列表"""
-        return [g.to_dict() for g in self.detector.detect_all()]
+        games = self.detector.detect_all()
+        result = []
+        for g in games:
+            d = g.to_dict()
+            d["artwork_urls"] = self.artwork.get_artwork_urls(g.game_id)
+            result.append(d)
+        return result
 
     async def get_game_details(self, game_id: str) -> dict:
         """获取单个游戏详情"""

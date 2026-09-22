@@ -16,7 +16,7 @@ import { addToSteam, removeFromSteam, launchViaScript, refreshArtwork } from "..
 import { t } from "../i18n";
 import type { GameInstallInfo, ShortcutResult } from "../types";
 
-// 游戏封面渐变色
+// 游戏封面渐变色（图片加载失败时的兜底）
 const GAME_COLORS: Record<string, [string, string]> = {
   hk4e_cn: ["#2476b8", "#73c6d9"],
   hkrpg_cn: ["#28235f", "#7c63c8"],
@@ -61,6 +61,7 @@ export function GameCard({
   const [error, setError] = useState<string>();
 
   const [startColor, endColor] = GAME_COLORS[game.game_id] || ["#26364a", "#58799c"];
+  const capsuleUrl = game.artwork_urls?.capsule ?? null;
 
   // 启动已安装的游戏
   const handleLaunch = async () => {
@@ -183,10 +184,22 @@ export function GameCard({
         position: "relative", overflow: "hidden",
         background: `linear-gradient(135deg, ${startColor}, ${endColor})`,
       }}>
+        {capsuleUrl && (
+          <img
+            src={capsuleUrl}
+            alt=""
+            loading="lazy"
+            style={{
+              position: "absolute", inset: 0,
+              width: "100%", height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        )}
+        {/* 底部渐变遮罩，保证文字可读 */}
         <div style={{
-          position: "absolute", right: -30, top: -30,
-          width: 120, height: 120, borderRadius: "50%",
-          background: "rgba(255,255,255,.1)",
+          position: "absolute", inset: 0,
+          background: "linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 60%)",
         }} />
         <div style={{
           position: "absolute", bottom: 12, left: 12, right: 12,
